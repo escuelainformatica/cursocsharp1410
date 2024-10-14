@@ -96,8 +96,24 @@ namespace ConsoleApp1
              prod.cantidad = 50;
              var prod2 = new Producto() { nombre = "fanta", cantidad = 60, precio=50 };
              var listproductos = new List<Producto>() { prod, prod2 };¡        
-         } 
-    }
+         }
+        static void Main(string[] args)
+        {
+            // listado de clientes
+            // cliente -> nombre, rut, deuda
+
+            var cli1 = new Cliente() { nombre = "john", rut = "2222-2", deuda =0};
+            var cli2 = new Cliente() { nombre = "anna", rut = "3333-3", deuda = 100 };
+            var cli3 = new Cliente() { nombre = "peter", rut = "222-3", deuda = 200 };
+
+            var clientes = new List<Cliente>();
+            clientes.Add(cli1);
+            clientes.Add(cli2);
+            clientes.Add(cli3);
+
+        }
+
+    } // fin clase
 
     class Producto
     {
@@ -105,6 +121,12 @@ namespace ConsoleApp1
         public string nombre;
         public int precio;
         public int cantidad;
+    }
+    class Cliente
+    {
+        public string nombre;
+        public string rut;
+        public int deuda;
     }
 
 }
