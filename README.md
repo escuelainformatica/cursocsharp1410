@@ -64,7 +64,49 @@ namespace ConsoleApp1
             ciudades.Add("Antofagasta");
         
         }
+         static void Main(string[] args)
+         {
+             // crear listados
+             var listado = new List<string>() { "cocacola", "fanta", "sprite" };
+             var listado2 = new List<string>();
+             listado2.Add("cocacola");
+             listado2.Add("fanta");
+             listado2.Add("sprite");
+             //y mostrar
+             Console.WriteLine(listado[0]);
+             Console.WriteLine(listado[1]);
+             Console.WriteLine(listado[2]);
+        
+             // var variable=20 creo una variable y le asigno valor. PRIMITIVAS.
+             // var varabiel=new ...  se llaman OBJETOS.
+        
+             // productos:
+             // nombre    precio    cantidad
+             // --------------------------
+             // cocacola  100       20
+             // fanta     50        60
+        
+             var listadoproducto1 = new List<string>() { "cocacola","fanta" };
+             var listadoprecio = new List<int>() { 100,20 };
+             var listadocantidad = new List<int>() { 50,60 };
+        
+             var prod = new Producto(); // la var product se llama objeto.
+             prod.nombre = "cocacola";
+             prod.precio = 100;
+             prod.cantidad = 50;
+             var prod2 = new Producto() { nombre = "fanta", cantidad = 60, precio=50 };
+             var listproductos = new List<Producto>() { prod, prod2 };¡        
+         } 
     }
+
+    class Producto
+    {
+        // campos (son similares a las variables)
+        public string nombre;
+        public int precio;
+        public int cantidad;
+    }
+
 }
 
 
