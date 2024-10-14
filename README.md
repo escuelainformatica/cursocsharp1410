@@ -38,6 +38,32 @@ namespace ConsoleApp1
             Console.WriteLine(texto);
 
         }
+
+
+        static void Main(string[] args)
+        {
+            // la variable es valida:
+            // desde cuando se define, hasta el final del bloque de codigo
+            var numero2 = 20;
+            Console.WriteLine(numero2);
+            // una variable puede asignarse un valor diferente
+            numero2 = 100;
+            Console.WriteLine(numero2);
+            // arreglo:
+            int[] numeros = new int[4] { 1, 2, 3, 4 };
+            Console.WriteLine(numeros[2]);  // muestra el 3, ya que parte del indice cero.
+            string[] paises = new string[3] { "Chile", "Argentina", "Peru" };
+            Console.WriteLine(numeros[0]); // "Chile.
+            // listas
+            List<int> numeros2 = new List<int>() { 1,2,3,4};
+            Console.WriteLine(numeros2[2]); //3 
+            numeros2.Add(5); // agrego un elemento nuevo.
+            List<string> ciudades = new List<string>();
+            ciudades.Add("Arica");
+            ciudades.Add("Iquique");
+            ciudades.Add("Antofagasta");
+        
+        }
     }
 }
 
